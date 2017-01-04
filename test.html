@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div id="wrapper">
+            <iframe id="fr" src="./1950s/index.html" width="1080px" height="1920px"> </iframe> <!--  width="1080px" height="1920px"> -->
+        </div>
+        <style>
+            iframe {
+                /*transform: scale(.4);*/
+            }
+        </style>
+        <script>
+            let wrapper = document.getElementById("wrapper");
+            let fr = document.getElementById('fr');
+            fr.style.transform = 'scale(' + (window.innerHeight / 1920 - .03) + ')'
+            console.log(fr.width);
+            console.log(1080 * (window.innerHeight / 1920 - .03) / 2);
+            fr.style.marginLeft = -(1080 * (window.innerHeight / 1920 - .03) / 2) + 'px';
+            fr.style.marginRight = -(1080 * (window.innerHeight / 1920 - .03) / 2) + 'px';
+            fr.style.marginTop = -(1920 * (window.innerHeight / 1920 - .03) / 2) + 'px';
+            fr.style.marginBottom = -(1920 * (window.innerHeight / 1920 - .03) / 2) + 'px';
+        </script>
+    </body>
+</html>
